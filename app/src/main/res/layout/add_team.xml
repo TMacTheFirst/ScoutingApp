@@ -37,63 +37,63 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 1"
+            android:text="Portcullis"
             android:id="@+id/checkBox"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 2"
+            android:text="Cheval de Frise"
             android:id="@+id/checkBox2"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 3"
+            android:text="Moat"
             android:id="@+id/checkBox3"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 4"
+            android:text="Ramparts"
             android:id="@+id/checkBox4"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 5"
+            android:text="Drawbridge"
             android:id="@+id/checkBox5"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 6"
+            android:text="Sally Port"
             android:id="@+id/checkBox6"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 7"
+            android:text="Rock Wall"
             android:id="@+id/checkBox7"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 8"
+            android:text="Rough Terrain"
             android:id="@+id/checkBox8"
             android:checked="false"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Defense 9"
+            android:text="Low Bar"
             android:id="@+id/checkBox9"
             android:checked="false"/>
 
@@ -116,6 +116,13 @@
             android:layout_height="wrap_content"
             android:text="Lift"
             android:id="@+id/checkBox12"
+            android:checked="false"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autonomous Points"
+            android:id="@+id/checkBox13"
             android:checked="false"/>
 
         <Button

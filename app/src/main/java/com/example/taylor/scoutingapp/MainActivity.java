@@ -75,6 +75,7 @@ public class MainActivity extends ActionBarActivity
                 viewIntent.putExtra("number", teams.get(position).number);
                 viewIntent.putExtra("notes", teams.get(position).notes);
                 viewIntent.putExtra("defenses", teams.get(position).defenses);
+                viewIntent.putExtra("index", position);
                 startActivity(viewIntent);
             }
         });

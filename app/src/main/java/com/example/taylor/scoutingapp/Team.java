@@ -14,7 +14,7 @@ public class Team //implements Parcelable
     {
         teamName = name;
         number = num;
-        defenses = new boolean[12];
+        defenses = new boolean[13];
         for(int i=0; i<9; i++)
             defenses[i] = false;
     }

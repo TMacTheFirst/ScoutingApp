@@ -39,6 +39,7 @@ public class AddTeamActivity extends ActionBarActivity
         final CheckBox d10 = (CheckBox) findViewById(R.id.checkBox10);
         final CheckBox d11 = (CheckBox) findViewById(R.id.checkBox11);
         final CheckBox d12 = (CheckBox) findViewById(R.id.checkBox12);
+        final CheckBox d13 = (CheckBox) findViewById(R.id.checkBox13);
 
         saveTeamButton.setOnClickListener(new View.OnClickListener()
         {
@@ -59,6 +60,7 @@ public class AddTeamActivity extends ActionBarActivity
                 t.defenses[9] = d10.isChecked();
                 t.defenses[10] = d11.isChecked();
                 t.defenses[11] = d12.isChecked();
+                t.defenses[12] = d13.isChecked();
 
 
                 MainActivity.teams.add(t);
