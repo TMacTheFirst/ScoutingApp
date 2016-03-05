@@ -104,6 +104,13 @@ public class MainActivity extends ActionBarActivity
             return true;
         }
 
+        if(id == R.id.filter_teams)
+        {
+            Intent filter = new Intent(this, FilterTeamsActivity.class);
+            startActivity(filter);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }

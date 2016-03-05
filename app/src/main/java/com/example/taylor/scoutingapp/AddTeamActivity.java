@@ -22,6 +22,9 @@ public class AddTeamActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_team);
 
+        setTitle("Add Team");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Button saveTeamButton = (Button) findViewById(R.id.saveTeamButton);
         final EditText name = (EditText) findViewById(R.id.nameText);
         final EditText number = (EditText) findViewById(R.id.numberText);
@@ -100,7 +103,11 @@ public class AddTeamActivity extends ActionBarActivity
         {
             return true;
         }
-
+        if (id == android.R.id.home)
+        {
+            onBackPressed();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }

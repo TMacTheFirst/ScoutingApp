@@ -18,68 +18,86 @@ import com.google.gson.Gson;
 
 public class ViewTeamActivity extends ActionBarActivity
 {
+    public boolean flag;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_team);
+;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        flag = true;
         String name = (String) getIntent().getExtras().get("name");
         int number = (int) getIntent().getExtras().get("number");
         String notes = (String) getIntent().getExtras().get("notes");
         boolean[] defenses = (boolean[]) getIntent().getExtras().get("defenses");
         final int position = (int) getIntent().getExtras().get("index");
 
+        setTitle("Team " + number);
+
         final TextView nameView = (TextView) findViewById(R.id.teamName);
         nameView.setText(name);
 
-        final TextView numberView = (TextView) findViewById(R.id.teamNumber);
-        numberView.setText("" + number);
-
         final EditText notesView = (EditText) findViewById(R.id.notes);
         notesView.setText(notes);
+        notesView.setFocusable(false);
 
         final CheckBox d1 = (CheckBox) findViewById(R.id.d1);
         d1.setChecked(defenses[0]);
+        d1.setClickable(false);
 
         final CheckBox d2 = (CheckBox) findViewById(R.id.d2);
         d2.setChecked(defenses[1]);
+        d2.setClickable(false);
 
         final CheckBox d3 = (CheckBox) findViewById(R.id.d3);
         d3.setChecked(defenses[2]);
+        d3.setClickable(false);
 
         final CheckBox d4 = (CheckBox) findViewById(R.id.d4);
         d4.setChecked(defenses[3]);
+        d4.setClickable(false);
 
         final CheckBox d5 = (CheckBox) findViewById(R.id.d5);
         d5.setChecked(defenses[4]);
+        d5.setClickable(false);
 
         final CheckBox d6 = (CheckBox) findViewById(R.id.d6);
         d6.setChecked(defenses[5]);
+        d6.setClickable(false);
 
         final CheckBox d7 = (CheckBox) findViewById(R.id.d7);
         d7.setChecked(defenses[6]);
+        d7.setClickable(false);
 
         final CheckBox d8 = (CheckBox) findViewById(R.id.d8);
         d8.setChecked(defenses[7]);
+        d8.setClickable(false);
 
         final CheckBox d9 = (CheckBox) findViewById(R.id.d9);
         d9.setChecked(defenses[8]);
+        d9.setClickable(false);
 
         final CheckBox d10 = (CheckBox) findViewById(R.id.highGoal);
         d10.setChecked(defenses[9]);
+        d10.setClickable(false);
 
         final CheckBox d11 = (CheckBox) findViewById(R.id.lowGoal);
         d11.setChecked(defenses[10]);
+        d11.setClickable(false);
 
         final CheckBox d12 = (CheckBox) findViewById(R.id.lift);
         d12.setChecked(defenses[11]);
+        d12.setClickable(false);
 
         final CheckBox d13 = (CheckBox) findViewById(R.id.autonomousPoints);
         d13.setChecked(defenses[12]);
+        d13.setClickable(false);
 
-        Button edit = (Button) findViewById(R.id.editButton);
+        final Button edit = (Button) findViewById(R.id.editButton);
 
+        //confirm save dialog options
         final DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -101,8 +119,6 @@ public class ViewTeamActivity extends ActionBarActivity
                         t.defenses[11] = d12.isChecked();
                         t.defenses[12] = d13.isChecked();
 
-                        t.teamName = nameView.getText() + "";
-                        t.number = Integer.parseInt(numberView.getText() + "");
                         t.notes = notesView.getText() + "";
 
                         MainActivity.adapter.notifyDataSetChanged();
@@ -126,16 +142,42 @@ public class ViewTeamActivity extends ActionBarActivity
             }
         };
 
-        edit.setOnClickListener(new View.OnClickListener()
+        View.OnClickListener listener = new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
-                        .setNegativeButton("No", dialogClickListener).show();
+                if(flag)
+                {
+                    flag = false;
+                    edit.setText("Save");
+                    notesView.setFocusableInTouchMode(true);
+
+                    d1.setClickable(true);
+                    d2.setClickable(true);
+                    d3.setClickable(true);
+                    d4.setClickable(true);
+                    d5.setClickable(true);
+                    d6.setClickable(true);
+                    d7.setClickable(true);
+                    d8.setClickable(true);
+                    d9.setClickable(true);
+                    d10.setClickable(true);
+                    d11.setClickable(true);
+                    d12.setClickable(true);
+                    d13.setClickable(true);
+
+                }
+                else
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    builder.setMessage("Are you sure?").setPositiveButton("Yes", dialogClickListener)
+                            .setNegativeButton("No", dialogClickListener).show();
+                }
             }
-        });
+        };
+
+        edit.setOnClickListener(listener);
 
     }
 
@@ -159,6 +201,12 @@ public class ViewTeamActivity extends ActionBarActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings)
         {
+            return true;
+        }
+
+        if (id == android.R.id.home)
+        {
+            onBackPressed();
             return true;
         }
 

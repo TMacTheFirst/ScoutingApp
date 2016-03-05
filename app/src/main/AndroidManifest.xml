@@ -24,6 +24,14 @@
             android:name=".ViewTeamActivity"
             android:label="@string/title_activity_view_team" >
         </activity>
+        <activity
+            android:name=".FilterTeamsActivity"
+            android:label="FilterTeamsActivity" >
+        </activity>
+        <activity
+            android:name=".ViewFilteredActivity"
+            android:label="@string/title_activity_view_filtered" >
+        </activity>
     </application>
 
 </manifest>
