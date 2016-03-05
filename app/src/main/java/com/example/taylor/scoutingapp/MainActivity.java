@@ -43,11 +43,6 @@ public class MainActivity extends ActionBarActivity
             teams.add(t);
         }
 
-    /*    Team collective = new Team("Hawk Collective", 2890);
-        for(int i=0; i<collective.defenses.length; i++)
-            collective.defenses[i] = true;
-        collective.notes = "You will be assimilated!";
-        teams.add(collective);*/
         Button addTeamButton = (Button) findViewById(R.id.addTeamButton);
         addTeamButton.setOnClickListener(new View.OnClickListener()
         {
