@@ -12,8 +12,7 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView">t"
-    android:id="@+id/scrollView">
+        android:id="@+id/scrollView">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
@@ -40,7 +39,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <LinearLayout
+
+
+
+
+
+  <!--  <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -49,104 +53,8 @@
         android:layout_alignRight="@+id/notesText"
         android:layout_alignEnd="@+id/notesText">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Portcullis"
-            android:id="@+id/checkBox"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cheval de Frise"
-            android:id="@+id/checkBox2"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Moat"
-            android:id="@+id/checkBox3"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ramparts"
-            android:id="@+id/checkBox4"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Drawbridge"
-            android:id="@+id/checkBox5"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sally Port"
-            android:id="@+id/checkBox6"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rock Wall"
-            android:id="@+id/checkBox7"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rough Terrain"
-            android:id="@+id/checkBox8"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Low Bar"
-            android:id="@+id/checkBox9"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="High Goal"
-            android:id="@+id/checkBox10"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Low Goal"
-            android:id="@+id/checkBox11"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lift"
-            android:id="@+id/checkBox12"
-            android:checked="false"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Autonomous Points"
-            android:id="@+id/checkBox13"
-            android:checked="false"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save Team"
-            android:id="@+id/saveTeamButton"/>
     </LinearLayout>
-
+-->
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -188,6 +96,206 @@
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/numberText"
         android:layout_alignStart="@+id/numberText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_below="@+id/notesText"
+        android:id="@+id/d1and2"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Defense 1"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Portcullis"
+                android:id="@+id/checkBox"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cheval de Frise"
+                android:id="@+id/checkBox2"
+                android:checked="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_below="@+id/notesText">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Defense 2"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moat"
+                android:id="@+id/checkBox3"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ramparts"
+                android:id="@+id/checkBox4"
+                android:checked="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_below="@+id/d1and2"
+        android:id="@+id/d3and4"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Defense 3"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drawbridge"
+                android:id="@+id/checkBox5"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sally Port"
+                android:id="@+id/checkBox6"
+                android:checked="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_below="@+id/notesText">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Defense 4"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rock Wall"
+                android:id="@+id/checkBox7"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rough Terrain"
+                android:id="@+id/checkBox8"
+                android:checked="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_below="@+id/d3and4"
+        android:id="@+id/capabilities"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Capabilities"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low Bar"
+                android:id="@+id/checkBox9"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High Goal"
+                android:id="@+id/checkBox10"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low Goal"
+                android:id="@+id/checkBox11"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lift"
+                android:id="@+id/checkBox12"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Autonomous Points"
+                android:id="@+id/checkBox13"
+                android:checked="false"/>
+        </LinearLayout>
+    <!--    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_below="@+id/notesText">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Defense 4"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rock Wall"
+                android:id="@+id/checkBox7"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rough Terrain"
+                android:id="@+id/checkBox8"
+                android:checked="false"/>
+        </LinearLayout> !-->
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Team"
+        android:id="@+id/saveTeamButton"
+        android:layout_below="@+id/capabilities"
+        android:layout_marginTop="10dp"/>
+
 </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
